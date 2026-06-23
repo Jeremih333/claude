@@ -1,0 +1,24 @@
+{
+  "test": "story_centric_mode",
+  "feature_flag": true,
+  "total_candidates": 33,
+  "story_centric_count": 0,
+  "legacy_count": 5,
+  "windows_sample": [
+    {
+      "start": 2.92,
+      "end": 114.84,
+      "source": "scene_cluster"
+    },
+    {
+      "start": 114.84,
+      "end": 151.84,
+      "source": "scene_cluster"
+    },
+    {
+      "start": 151.84,
+      "end": 203.72,
+      "source": "scene_cluster"
+    }
+  ]
+}

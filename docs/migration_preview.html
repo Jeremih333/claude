@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Migration Plan - Story-Centric Architecture</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            margin: 40px auto;
+            max-width: 1000px;
+            line-height: 1.6;
+            color: #333;
+            background: #f9f9f9;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        h3 {
+            color: #7f8c8d;
+        }
+        .status {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .status.in-progress {
+            background: #f39c12;
+            color: white;
+        }
+        .status.blocker {
+            background: #e74c3c;
+            color: white;
+        }
+        .status.complete {
+            background: #27ae60;
+            color: white;
+        }
+        code {
+            background: #ecf0f1;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Consolas', monospace;
+            font-size: 0.9em;
+        }
+        pre {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        pre code {
+            background: transparent;
+            color: inherit;
+        }
+        .issue-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .blocker-box {
+            background: #f8d7da;
+            border-left: 4px solid #e74c3c;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .success-box {
+            background: #d4edda;
+            border-left: 4px solid #27ae60;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        ul {
+            line-height: 1.8;
+        }
+        .test-result {
+            font-family: monospace;
+            background: #f8f9fa;
+            padding: 10px;
+            border-left: 3px solid #6c757d;
+            margin: 10px 0;
+        }
+        .test-result.pass {
+            border-color: #27ae60;
+        }
+        .test-result.fail {
+            border-color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Story-Centric Architecture Migration
+            <span class="status in-progress">🚧 In Progress</span>
+        </h1>
+        
+        <p><strong>Started:</strong> 2026-06-14<br>
+        <strong>Current Sprint:</strong> 1.5<br>
+        <strong>Target Completion:</strong> Sprint 3 (Week 4)</p>
+
+        <h2>Executive Summary</h2>
+        <p>Migrating Shorts Factory from <strong>temporal window-based</strong> candidate generation to <strong>semantic story-chain-based</strong> architecture.</p>
+
+        <div class="blocker-box">
+            <h2>🔴 BLOCKING ISSUE DISCOVERED (2026-06-14, 21:50)</h2>
+            <h3>Problem: Episode-Level Transcription Required</h3>
+            
+            <p><strong>Status:</strong> <span class="status blocker">BLOCKER</span> for story-centric activation</p>
+            
+            <p><strong>Root Cause:</strong></p>
+            <ul>
+                <li><code>_candidate_windows_story_centric()</code> requires <code>subtitle_info</code> with full episode transcription</li>
+                <li>Current architecture: transcription happens PER CANDIDATE (after window selection)</li>
+                <li>Story-centric needs: transcription BEFORE window selection (to build story chains)</li>
+            </ul>
+
+            <h4>Current Flow (Legacy):</h4>
+            <pre><code>1. _candidate_windows() → generates temporal windows (scene clusters)
+2. For each window:
+   3. Extract audio segment
+   4. Transcribe segment → subtitle_info
+   5. Build story candidates from segment</code></pre>
+
+            <h4>Required Flow (Story-Centric):</h4>
+            <pre><code>1. Extract full episode audio → WAV
+2. Transcribe full episode → episode_subtitle_info
+3. build_story_chains_for_episode(subtitle_info) → story chains
+4. _candidate_windows_story_centric() → converts chains to windows
+5. For each window: use pre-existing subtitle_info</code></pre>
+
+            <h4>Test Results:</h4>
+            <div class="test-result pass">✅ Feature flag works: use_story_centric_pipeline=True</div>
+            <div class="test-result pass">✅ Method routing works: calls _candidate_windows_story_centric()</div>
+            <div class="test-result fail">❌ Subtitle data missing: self.subtitle_info = None</div>
+            <div class="test-result">→ <strong>Result:</strong> Automatic fallback to legacy mode (33 scene_cluster candidates)</div>
+
+            <h4>Solution Options:</h4>
+            <ol>
+                <li><strong>Quick Fix (MVP):</strong> Add episode transcription in <code>pick_candidates()</code></li>
+                <li><strong>Production Fix (Sprint 1.6):</strong> Separate transcription as pre-processing with disk caching</li>
+            </ol>
+
+            <h4>Next Steps:</h4>
+            <ol>
+                <li>Implement <code>_transcribe_full_episode()</code> helper method</li>
+                <li>Modify <code>pick_candidates()</code> to populate <code>self.subtitle_info</code></li>
+                <li>Re-test story-centric activation</li>
+            </ol>
+        </div>
+
+        <h2>Sprint Progress</h2>
+        
+        <div class="success-box">
+            <h3>✅ Sprint 1.1-1.4: Core Refactoring (COMPLETE)</h3>
+            <ul>
+                <li>✅ Feature flag routing implemented</li>
+                <li>✅ Legacy/story-centric split working</li>
+                <li>✅ 3/3 baseline tests passing</li>
+            </ul>
+        </div>
+
+        <div class="issue-box">
+            <h3>🟡 Sprint 1.5: Story-Centric Activation (BLOCKED)</h3>
+            <ul>
+                <li>✅ Feature flag added to <code>settings.yaml</code></li>
+                <li>✅ Test created: <code>tests/test_story_centric_mode.py</code></li>
+                <li>✅ Bug fixed: <code>build_story_chains_for_episode()</code> missing <code>source_id</code> parameter</li>
+                <li>✅ Test runs successfully (with legacy fallback)</li>
+                <li>🔴 <strong>BLOCKED:</strong> Episode transcription not implemented</li>
+            </ul>
+        </div>
+
+        <h2>Subagent Analysis Results</h2>
+        <div class="success-box">
+            <h3>✅ Subagent Tools: Working</h3>
+            <p><strong>Test:</strong> Analyzed <code>pipeline/subtitle.py</code></p>
+            <p><strong>Key Findings:</strong></p>
+            <ul>
+                <li><code>transcribe_segment()</code> takes WAV path, returns subtitle_info with 'segments' field</li>
+                <li>Can be used for full episode by extracting full episode WAV</li>
+                <li>No built-in caching - needs implementation</li>
+                <li>Processing mode: 'balanced_local' or 'enhanced_local'</li>
+            </ul>
+        </div>
+
+        <h2>Current Architecture Issues</h2>
+        <ul>
+            <li>🔴 <strong>Dual candidate generation paths:</strong> Legacy temporal vs semantic story chains</li>
+            <li>🔴 <strong>Technical metadata leaks:</strong> "dialogue_cluster", "fallback_window" appear in titles</li>
+            <li>🔴 <strong>Temporal rejection criteria:</strong> Uses duration instead of story completion</li>
+            <li>🔴 <strong>Dramatic pauses lost:</strong> <code>dramatic_kept_total = 0</code></li>
+        </ul>
+
+        <h2>Success Metrics</h2>
+        <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+            <tr style="background: #ecf0f1;">
+                <th style="padding: 10px; text-align: left; border: 1px solid #bdc3c7;">Metric</th>
+                <th style="padding: 10px; text-align: left; border: 1px solid #bdc3c7;">Pre-Migration</th>
+                <th style="padding: 10px; text-align: left; border: 1px solid #bdc3c7;">Target</th>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #bdc3c7;">output_count</td>
+                <td style="padding: 10px; border: 1px solid #bdc3c7;">3 (capped)</td>
+                <td style="padding: 10px; border: 1px solid #bdc3c7;">≥ 5</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #bdc3c7;">arc_complete_rate</td>
+                <td style="padding: 10px; border: 1px solid #bdc3c7;">Unknown</td>
+                <td style="padding: 10px; border: 1px solid #bdc3c7;">≥ 0.75</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #bdc3c7;">technical_title_count</td>
+                <td style="padding: 10px; border: 1px solid #bdc3c7;">> 0</td>
+                <td style="padding: 10px; border: 1px solid #bdc3c7;">0</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #bdc3c7;">dramatic_kept_total</td>
+                <td style="padding: 10px; border: 1px solid #bdc3c7;">0</td>
+                <td style="padding: 10px; border: 1px solid #bdc3c7;">> 0</td>
+            </tr>
+        </table>
+
+        <h2>Timeline</h2>
+        <ul>
+            <li><strong>Sprint 1 (Week 1-2):</strong> Core migration, candidate dict unification</li>
+            <li><strong>Sprint 2 (Week 3):</strong> Titling integration, silence preservation</li>
+            <li><strong>Sprint 3 (Week 4):</strong> Testing, cleanup, documentation</li>
+        </ul>
+
+        <div style="margin-top: 40px; padding-top: 20px; border-top: 2px solid #ecf0f1; color: #7f8c8d; font-size: 0.9em;">
+            <p><strong>Migration Lead:</strong> Kiro (AI Dev Agent)<br>
+            <strong>Last Updated:</strong> 2026-06-14, 21:54 MSK<br>
+            <strong>Document:</strong> docs/MIGRATION_STORY_CENTRIC.md</p>
+        </div>
+    </div>
+</body>
+</html>

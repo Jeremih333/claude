@@ -1,0 +1,15 @@
+PySide6>=6.6,<6.9
+opencv-python
+moviepy
+ffmpeg-python
+numpy<2.0
+tqdm
+scenedetect
+webrtcvad
+pyyaml
+faster-whisper
+mediapipe
+pydub
+requests
+pillow
+setuptools<81

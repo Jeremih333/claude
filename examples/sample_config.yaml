@@ -1,0 +1,13 @@
+# Default settings for ShortsFactory
+max_short_seconds: 90
+candidate_window_seconds: 180
+drop_silent: true
+use_visual_asd: true
+analysis_fps: 2
+face_detection_fps: 8
+scoring_weights:
+  speech_density: 0.35
+  audio_peaks: 0.20
+  face_presence: 0.20
+  motion: 0.15
+  keyword_score: 0.10

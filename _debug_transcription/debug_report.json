@@ -1,0 +1,26 @@
+{
+  "video": "episode01_test.avi",
+  "candidate": {
+    "window": [
+      2.92,
+      114.84
+    ],
+    "wav_path": "_debug_transcription\\cand_0.wav",
+    "result": {
+      "srt_path": null,
+      "segments": [],
+      "line_count": 0,
+      "confidence": 0.0,
+      "language": "ru"
+    }
+  },
+  "episode": {
+    "result": {
+      "srt_path": null,
+      "segments": [],
+      "line_count": 0,
+      "confidence": 0.0,
+      "language": "ru"
+    }
+  }
+}

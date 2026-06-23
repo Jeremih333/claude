@@ -1,0 +1,76 @@
+[
+  {
+    "start": 4.37,
+    "end": 27.45,
+    "duration": 23.08,
+    "transcript": "Это Эдик, слушай, я могу отмечусь, я не налога. Спасибо. Вы за мной это сейчас не ходите, я пока сам. Добрый день.",
+    "speakers": [
+      "UNKNOWN"
+    ],
+    "emotion_signals": [],
+    "conflict_signals": [],
+    "causal_markers": [],
+    "topic_tokens": [
+      "добрый",
+      "могу",
+      "налога",
+      "отмечусь",
+      "слушай",
+      "спасибо",
+      "ходите",
+      "эдик"
+    ],
+    "silence_metadata": {
+      "leading_gap": 4.37,
+      "trailing_gap": 0.0,
+      "pause_signals": [
+        1.1,
+        0.74,
+        9.98
+      ]
+    },
+    "role": "hook",
+    "turn_count": 7,
+    "hook_score": 0.02,
+    "conflict_score": 0.0,
+    "emotion_score": 0.0,
+    "payoff_score": 0.0164,
+    "escalation_score": 0.0
+  },
+  {
+    "start": 28.89,
+    "end": 35.37,
+    "duration": 6.48,
+    "transcript": "Ну, не для всех, конечно, он добрый. Ничего нового, мы не можем спокойно отожить. Не можем ромнуть.",
+    "speakers": [
+      "UNKNOWN"
+    ],
+    "emotion_signals": [],
+    "conflict_signals": [],
+    "causal_markers": [],
+    "topic_tokens": [
+      "всех",
+      "добрый",
+      "конечно",
+      "можем",
+      "ничего",
+      "нового",
+      "отожить",
+      "спокойно"
+    ],
+    "silence_metadata": {
+      "leading_gap": 28.89,
+      "trailing_gap": 0.0,
+      "pause_signals": [
+        0.58
+      ]
+    },
+    "role": "payoff",
+    "turn_count": 5,
+    "hook_score": 0.0,
+    "conflict_score": 0.0,
+    "emotion_score": 0.0,
+    "payoff_score": 0.0,
+    "escalation_score": 0.0
+  }
+]

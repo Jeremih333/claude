@@ -1,0 +1,36 @@
+{
+  "paths": [
+    {
+      "reason": "insufficient_context",
+      "count": 3,
+      "impact": "story_loss",
+      "examples": [
+        {
+          "start": 329.64,
+          "end": 366.8,
+          "source": "scene_cluster"
+        },
+        {
+          "start": 1187.56,
+          "end": 1228.84,
+          "source": "scene_cluster"
+        },
+        {
+          "start": 1228.84,
+          "end": 1265.88,
+          "source": "scene_cluster"
+        }
+      ]
+    },
+    {
+      "reason": "starts_mid_phrase",
+      "count": 1,
+      "impact": "story_loss",
+      "examples": []
+    }
+  ],
+  "reason_counts": {
+    "insufficient_context": 3,
+    "starts_mid_phrase": 1
+  }
+}

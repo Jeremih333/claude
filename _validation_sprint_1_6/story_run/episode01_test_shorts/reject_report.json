@@ -1,0 +1,75 @@
+{
+  "paths": [
+    {
+      "reason": "insufficient_context",
+      "count": 3,
+      "impact": "story_loss",
+      "examples": [
+        {
+          "start": 329.64,
+          "end": 366.8,
+          "source": "scene_cluster"
+        },
+        {
+          "start": 1187.56,
+          "end": 1228.84,
+          "source": "scene_cluster"
+        },
+        {
+          "start": 1228.84,
+          "end": 1265.88,
+          "source": "scene_cluster"
+        }
+      ]
+    },
+    {
+      "reason": "low_story_interest",
+      "count": 1,
+      "impact": "story_loss",
+      "examples": [
+        {
+          "start": 2.92,
+          "end": 113.32,
+          "source": "scene_cluster"
+        }
+      ]
+    },
+    {
+      "reason": "no subtitles",
+      "count": 1,
+      "impact": "subtitle_loss",
+      "examples": []
+    },
+    {
+      "reason": "weak_hook",
+      "count": 1,
+      "impact": "unknown",
+      "examples": [
+        {
+          "start": 1265.88,
+          "end": 1304.56,
+          "source": "scene_cluster"
+        }
+      ]
+    },
+    {
+      "reason": "weak_packaging_fit",
+      "count": 1,
+      "impact": "unknown",
+      "examples": [
+        {
+          "start": 501.96,
+          "end": 543.84,
+          "source": "scene_cluster"
+        }
+      ]
+    }
+  ],
+  "reason_counts": {
+    "insufficient_context": 3,
+    "weak_hook": 1,
+    "weak_packaging_fit": 1,
+    "low_story_interest": 1,
+    "no subtitles": 1
+  }
+}

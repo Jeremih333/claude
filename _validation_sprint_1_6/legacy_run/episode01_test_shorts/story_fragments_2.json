@@ -1,0 +1,77 @@
+[
+  {
+    "start": 0.43,
+    "end": 29.66,
+    "duration": 29.23,
+    "transcript": "Все произошло как -то сзади. И я даже разглядеть, ничего не успел. Можно я домой пойду. Короче, намов. Нарисовал в себе историю? Чего вы мне не верите? Ну чего вы мне не верите? Да тебе вообще никто не верит? Да у любого спроси. Нет, ну а чего вы там вообще пошел в родкиоск работы? История какая -то мутная. У него по ходу какой -то план был?",
+    "speakers": [
+      "UNKNOWN"
+    ],
+    "emotion_signals": [],
+    "conflict_signals": [
+      "нет"
+    ],
+    "causal_markers": [],
+    "topic_tokens": [
+      "верите",
+      "домой",
+      "ничего",
+      "произошло",
+      "разглядеть",
+      "сзади",
+      "успел",
+      "чего"
+    ],
+    "silence_metadata": {
+      "leading_gap": 0.43,
+      "trailing_gap": 0.0,
+      "pause_signals": [
+        2.05,
+        1.34,
+        3.98,
+        1.22,
+        0.62,
+        0.38,
+        0.34,
+        0.42,
+        0.64,
+        0.66,
+        0.68
+      ]
+    },
+    "role": "hook",
+    "turn_count": 17,
+    "hook_score": 0.0,
+    "conflict_score": 0.0159,
+    "emotion_score": 0.0,
+    "payoff_score": 0.0,
+    "escalation_score": 0.0
+  },
+  {
+    "start": 33.99,
+    "end": 34.81,
+    "duration": 0.82,
+    "transcript": "План, ага.",
+    "speakers": [
+      "UNKNOWN"
+    ],
+    "emotion_signals": [],
+    "conflict_signals": [],
+    "causal_markers": [],
+    "topic_tokens": [
+      "план"
+    ],
+    "silence_metadata": {
+      "leading_gap": 33.99,
+      "trailing_gap": 0.0,
+      "pause_signals": []
+    },
+    "role": "payoff",
+    "turn_count": 1,
+    "hook_score": 0.0,
+    "conflict_score": 0.0,
+    "emotion_score": 0.0,
+    "payoff_score": 0.0,
+    "escalation_score": 0.0
+  }
+]

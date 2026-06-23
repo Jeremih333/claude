@@ -1,0 +1,261 @@
+{
+  "hook": "Все произошло как -то сзади. И я даже разглядеть, ничего не успел. Можно я домой пойду. Короче, намов. Нарисовал в себе историю? Чего вы мне не верите? Ну чего вы мне не верите? Да тебе вообще никто не верит? Да у любого спроси. Нет, ну а чего вы там вообще пошел в родкиоск работы? История какая -то мутная. У него по ходу какой -то план был?",
+  "setup": "сзади.",
+  "escalation": "И я даже разглядеть, ничего не успел. Можно я домой пойду. Короче, намов. Нарисовал в себе историю? Чего вы мне не верите? Ну чего вы мне не верите? Да тебе вообще никто не верит? Да у любого спроси. Нет, ну а чего вы там вообще пошел в родкиоск работы? История какая -то мутная. У него по ходу какой -то план был?",
+  "payoff": "План, ага.",
+  "conversation_id": "conv_83642b4e17",
+  "story_arc_shape": "hook_setup_escalation",
+  "story_deficient": false,
+  "summary_text": "Все произошло как -то сзади. И я даже разглядеть, ничего не успел. Можно я домой пойду. Короче,",
+  "keywords": [
+    "чего",
+    "верите",
+    "вообще",
+    "план"
+  ],
+  "story_window_segments": [
+    {
+      "role": "hook",
+      "start": 0.43,
+      "end": 29.66
+    },
+    {
+      "role": "payoff",
+      "start": 33.99,
+      "end": 34.81
+    }
+  ],
+  "candidate_id": "cand_00002",
+  "candidate_rank": 2,
+  "final_duration": 35.72,
+  "story_thread_id": "thread_651c7d6aaa",
+  "story_completion_score": 0.8641,
+  "context_completeness_score": 0.4424,
+  "hook_type": "stakes_first",
+  "payoff_type": "scene",
+  "topic_shift_events": 1,
+  "story_summary": {
+    "conversation_id": "conv_caf432f3a2",
+    "story_thread_id": "conv_caf432f3a2",
+    "story_arc_shape": "hook_setup",
+    "hook": "Все произошло как -то сзади. И я даже разглядеть, ничего не успел. Можно я домой пойду. Короче, намов. Нарисовал в себе историю? Чего вы мне не верите? Ну чего вы мне не верите? Да тебе вообще никто не верит? Да у любого спроси. Нет, ну а чего вы там вообще пошел в родкиоск работы? История какая -то мутная. У него по ходу какой -то план был?",
+    "setup": "",
+    "escalation": "",
+    "payoff": "План, ага.",
+    "summary_text": "Все произошло как -то сзади. И я даже разглядеть, ничего не успел. Можно я домой пойду. Короче, намов. Нарисовал в себе историю? Чего вы мне не верите? Ну чего вы мне не верите? Да тебе вообще никто не верит? Да у любого спроси. Нет, ну а чего вы там вообще пошел в родкиоск работы? История какая -то мутная. У него по ходу какой -то план был? План, ага.",
+    "title_seed": "Все произошло как -то сзади. И я даже разглядеть, ничего не успел. Можно я домой пойду. Короче, намов. Нарисовал в",
+    "hook_type": "question",
+    "payoff_type": "resolution",
+    "characters": [
+      "UNKNOWN"
+    ],
+    "topic_terms": [
+      "чего",
+      "верите",
+      "dialogue",
+      "cluster"
+    ],
+    "emotions": [],
+    "conflict_signals": [
+      "нет"
+    ],
+    "conflict_type": "argument",
+    "topic_phrase": "произошло сзади разглядеть ничего успел",
+    "story_deficient": true,
+    "story_completion_score": 0.5,
+    "context_completeness_score": 0.5,
+    "confidence": 0.6,
+    "is_complete": false
+  },
+  "story_chain": {
+    "conversation_id": "conv_caf432f3a2",
+    "story_thread_id": "conv_caf432f3a2",
+    "fragments": [
+      {
+        "start": 0.43,
+        "end": 29.66,
+        "duration": 29.23,
+        "transcript": "Все произошло как -то сзади. И я даже разглядеть, ничего не успел. Можно я домой пойду. Короче, намов. Нарисовал в себе историю? Чего вы мне не верите? Ну чего вы мне не верите? Да тебе вообще никто не верит? Да у любого спроси. Нет, ну а чего вы там вообще пошел в родкиоск работы? История какая -то мутная. У него по ходу какой -то план был?",
+        "speakers": [
+          "UNKNOWN"
+        ],
+        "emotion_signals": [],
+        "conflict_signals": [
+          "нет"
+        ],
+        "causal_markers": [],
+        "topic_tokens": [
+          "верите",
+          "домой",
+          "ничего",
+          "произошло",
+          "разглядеть",
+          "сзади",
+          "успел",
+          "чего"
+        ],
+        "silence_metadata": {
+          "leading_gap": 0.43,
+          "trailing_gap": 0.0,
+          "pause_signals": [
+            2.05,
+            1.34,
+            3.98,
+            1.22,
+            0.62,
+            0.38,
+            0.34,
+            0.42,
+            0.64,
+            0.66,
+            0.68
+          ]
+        },
+        "role": "hook",
+        "turn_count": 17,
+        "hook_score": 0.0,
+        "conflict_score": 0.0159,
+        "emotion_score": 0.0,
+        "payoff_score": 0.0,
+        "escalation_score": 0.0
+      },
+      {
+        "start": 33.99,
+        "end": 34.81,
+        "duration": 0.82,
+        "transcript": "План, ага.",
+        "speakers": [
+          "UNKNOWN"
+        ],
+        "emotion_signals": [],
+        "conflict_signals": [],
+        "causal_markers": [],
+        "topic_tokens": [
+          "план"
+        ],
+        "silence_metadata": {
+          "leading_gap": 33.99,
+          "trailing_gap": 0.0,
+          "pause_signals": []
+        },
+        "role": "payoff",
+        "turn_count": 1,
+        "hook_score": 0.0,
+        "conflict_score": 0.0,
+        "emotion_score": 0.0,
+        "payoff_score": 0.0,
+        "escalation_score": 0.0
+      }
+    ],
+    "hook": "Все произошло как -то сзади. И я даже разглядеть, ничего не успел. Можно я домой пойду. Короче, намов. Нарисовал в себе историю? Чего вы мне не верите? Ну чего вы мне не верите? Да тебе вообще никто не верит? Да у любого спроси. Нет, ну а чего вы там вообще пошел в родкиоск работы? История какая -то мутная. У него по ходу какой -то план был?",
+    "setup": "",
+    "escalation": "",
+    "payoff": "План, ага.",
+    "story_arc_shape": "hook_setup",
+    "summary": null,
+    "speakers": [
+      "UNKNOWN"
+    ],
+    "conflict_type": "argument",
+    "topic_tokens": [
+      "верите",
+      "домой",
+      "ничего",
+      "план",
+      "произошло",
+      "разглядеть",
+      "сзади",
+      "успел",
+      "чего"
+    ],
+    "start": 0.43,
+    "end": 34.81,
+    "duration": 34.38,
+    "is_complete": false,
+    "completion_score": 0.5,
+    "search_extended": false
+  },
+  "story_fragments": [
+    {
+      "start": 0.43,
+      "end": 29.66,
+      "duration": 29.23,
+      "transcript": "Все произошло как -то сзади. И я даже разглядеть, ничего не успел. Можно я домой пойду. Короче, намов. Нарисовал в себе историю? Чего вы мне не верите? Ну чего вы мне не верите? Да тебе вообще никто не верит? Да у любого спроси. Нет, ну а чего вы там вообще пошел в родкиоск работы? История какая -то мутная. У него по ходу какой -то план был?",
+      "speakers": [
+        "UNKNOWN"
+      ],
+      "emotion_signals": [],
+      "conflict_signals": [
+        "нет"
+      ],
+      "causal_markers": [],
+      "topic_tokens": [
+        "верите",
+        "домой",
+        "ничего",
+        "произошло",
+        "разглядеть",
+        "сзади",
+        "успел",
+        "чего"
+      ],
+      "silence_metadata": {
+        "leading_gap": 0.43,
+        "trailing_gap": 0.0,
+        "pause_signals": [
+          2.05,
+          1.34,
+          3.98,
+          1.22,
+          0.62,
+          0.38,
+          0.34,
+          0.42,
+          0.64,
+          0.66,
+          0.68
+        ]
+      },
+      "role": "hook",
+      "turn_count": 17,
+      "hook_score": 0.0,
+      "conflict_score": 0.0159,
+      "emotion_score": 0.0,
+      "payoff_score": 0.0,
+      "escalation_score": 0.0
+    },
+    {
+      "start": 33.99,
+      "end": 34.81,
+      "duration": 0.82,
+      "transcript": "План, ага.",
+      "speakers": [
+        "UNKNOWN"
+      ],
+      "emotion_signals": [],
+      "conflict_signals": [],
+      "causal_markers": [],
+      "topic_tokens": [
+        "план"
+      ],
+      "silence_metadata": {
+        "leading_gap": 33.99,
+        "trailing_gap": 0.0,
+        "pause_signals": []
+      },
+      "role": "payoff",
+      "turn_count": 1,
+      "hook_score": 0.0,
+      "conflict_score": 0.0,
+      "emotion_score": 0.0,
+      "payoff_score": 0.0,
+      "escalation_score": 0.0
+    }
+  ],
+  "rejected_for_missing_payoff": false,
+  "rejected_for_topic_jump": true,
+  "rejected_for_confusing_story": true,
+  "subtitle_rewrite_applied": false,
+  "subtitle_remap_used": false,
+  "subtitle_quality_score": 0.4464
+}

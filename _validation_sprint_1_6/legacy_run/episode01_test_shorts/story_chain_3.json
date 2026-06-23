@@ -1,0 +1,69 @@
+{
+  "conversation_id": "conv_fd445b1ce6",
+  "story_thread_id": "conv_fd445b1ce6",
+  "fragments": [
+    {
+      "start": 0.14,
+      "end": 38.72,
+      "duration": 38.58,
+      "transcript": "Я вижу, что я не фёдор. Коля, он хороший, он у нас на рынке ботинками торгует. Ну, а ты что -то не что? Стави давай здоровося! Нас есть удовольствие.",
+      "speakers": [
+        "UNKNOWN"
+      ],
+      "emotion_signals": [],
+      "conflict_signals": [],
+      "causal_markers": [],
+      "topic_tokens": [
+        "ботинками",
+        "вижу",
+        "коля",
+        "рынке",
+        "стави",
+        "торгует",
+        "фёдор",
+        "хороший"
+      ],
+      "silence_metadata": {
+        "leading_gap": 0.14,
+        "trailing_gap": 0.0,
+        "pause_signals": [
+          0.78,
+          30.78
+        ]
+      },
+      "role": "payoff",
+      "turn_count": 6,
+      "hook_score": 0.02,
+      "conflict_score": 0.0,
+      "emotion_score": 0.0,
+      "payoff_score": 0.0,
+      "escalation_score": 0.0
+    }
+  ],
+  "hook": "Я вижу, что я не фёдор. Коля, он хороший, он у нас на рынке ботинками торгует. Ну, а ты что -то не что? Стави давай здоровося! Нас есть удовольствие.",
+  "setup": "",
+  "escalation": "",
+  "payoff": "Я вижу, что я не фёдор. Коля, он хороший, он у нас на рынке ботинками торгует. Ну, а ты что -то не что? Стави давай здоровося! Нас есть удовольствие.",
+  "story_arc_shape": "hook_setup",
+  "summary": null,
+  "speakers": [
+    "UNKNOWN"
+  ],
+  "conflict_type": "none",
+  "topic_tokens": [
+    "ботинками",
+    "вижу",
+    "коля",
+    "рынке",
+    "стави",
+    "торгует",
+    "фёдор",
+    "хороший"
+  ],
+  "start": 0.14,
+  "end": 38.72,
+  "duration": 38.58,
+  "is_complete": false,
+  "completion_score": 0.5,
+  "search_extended": false
+}

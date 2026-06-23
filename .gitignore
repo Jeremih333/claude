@@ -1,0 +1,10 @@
+@"
+*.avi
+*.mp4
+*.mov
+*.mkv
+*.zip
+*.rar
+*.7z
+*.iso
+"@ | Out-File -FilePath .gitignore -Encoding utf8

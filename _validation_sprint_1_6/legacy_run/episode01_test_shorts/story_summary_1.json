@@ -1,0 +1,31 @@
+{
+  "conversation_id": "conv_4124cd8b26",
+  "story_thread_id": "conv_4124cd8b26",
+  "story_arc_shape": "hook_setup",
+  "hook": "Это Эдик, слушай, я могу отмечусь, я не налога. Спасибо. Вы за мной это сейчас не ходите, я пока сам. Добрый день.",
+  "setup": "",
+  "escalation": "",
+  "payoff": "Ну, не для всех, конечно, он добрый. Ничего нового, мы не можем спокойно отожить. Не можем ромнуть.",
+  "summary_text": "Это Эдик, слушай, я могу отмечусь, я не налога. Спасибо. Вы за мной это сейчас не ходите, я пока сам. Добрый день. Ну, не для всех, конечно, он добрый. Ничего нового, мы не можем спокойно отожить. Не можем ромнуть.",
+  "title_seed": "Это Эдик, слушай, я могу отмечусь, я не налога. Спасибо. Вы за мной это сейчас не ходите, я пока сам.",
+  "hook_type": "balanced_hook",
+  "payoff_type": "resolution",
+  "characters": [
+    "UNKNOWN"
+  ],
+  "topic_terms": [
+    "dialogue",
+    "cluster",
+    "visible",
+    "stakes"
+  ],
+  "emotions": [],
+  "conflict_signals": [],
+  "conflict_type": "none",
+  "topic_phrase": "эдик слушай могу отмечусь налога",
+  "story_deficient": true,
+  "story_completion_score": 0.5,
+  "context_completeness_score": 0.5,
+  "confidence": 0.6,
+  "is_complete": false
+}

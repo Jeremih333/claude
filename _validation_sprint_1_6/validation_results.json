@@ -1,0 +1,102 @@
+{
+  "episode": "episode01_test.avi",
+  "legacy": {
+    "status": "done",
+    "total_windows": 33,
+    "total_story_candidates": 30,
+    "publishable_candidates": 1,
+    "generated_outputs": 1,
+    "main_rejection_reason": "insufficient_context",
+    "rejection_reasons": {
+      "insufficient_context": 3
+    },
+    "ranking_timeouts": 6,
+    "semantic_preview_timeouts": 0,
+    "final_visual_rejects": 0,
+    "titles_generated": 1,
+    "outputs": [
+      {
+        "title": "",
+        "duration": 0,
+        "story_summary": "",
+        "transcript_excerpt": "",
+        "completion_score": 0,
+        "payoff_score": 0,
+        "context_score": 0,
+        "subtitle_quality_score": 0
+      }
+    ],
+    "avg_completion_score": 0.0,
+    "avg_payoff_score": 0.0,
+    "avg_context_score": 0.0,
+    "avg_subtitle_quality_score": 0.0
+  },
+  "story_centric": {
+    "status": "failed",
+    "total_windows": 12,
+    "total_story_candidates": 12,
+    "publishable_candidates": 0,
+    "generated_outputs": 0,
+    "main_rejection_reason": "no_story_candidates",
+    "rejection_reasons": {},
+    "ranking_timeouts": 6,
+    "semantic_preview_timeouts": 2,
+    "final_visual_rejects": 0,
+    "titles_generated": 0,
+    "outputs": [],
+    "avg_completion_score": 0,
+    "avg_payoff_score": 0,
+    "avg_context_score": 0,
+    "avg_subtitle_quality_score": 0
+  },
+  "comparison": {
+    "windows": {
+      "legacy": 33,
+      "story": 12,
+      "delta": -21
+    },
+    "candidates": {
+      "legacy": 30,
+      "story": 12,
+      "delta": -18
+    },
+    "publishable": {
+      "legacy": 1,
+      "story": 0,
+      "delta": -1
+    },
+    "outputs": {
+      "legacy": 1,
+      "story": 0,
+      "delta": -1
+    },
+    "quality": {
+      "completion": {
+        "legacy": 0.0,
+        "story": 0,
+        "delta": 0.0
+      },
+      "payoff": {
+        "legacy": 0.0,
+        "story": 0,
+        "delta": 0.0
+      },
+      "context": {
+        "legacy": 0.0,
+        "story": 0,
+        "delta": 0.0
+      },
+      "subtitle": {
+        "legacy": 0.0,
+        "story": 0,
+        "delta": 0.0
+      }
+    },
+    "rejections": {
+      "legacy": {
+        "insufficient_context": 3
+      },
+      "story": {}
+    }
+  }
+}
